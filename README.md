@@ -56,4 +56,4 @@ Navigate to the url that is displayed on your terminal
 ```sh
 pytest -v
 ```
-<img src="/assets/tests.PNG">
+<img src="/assets/test.PNG">
