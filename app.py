@@ -1,5 +1,5 @@
 import streamlit as st
-from movies.utils import PromoSaga, calculate_price
+from movies.utils import calculate_price
 
 st.title("Forward to the Past")
 
@@ -14,5 +14,8 @@ movies_bought = st.text_area(
 )
 
 if st.button("Calculate"):
-    price = calculate_price(movies_bought, PromoSaga.BACK_TO_THE_FUTURE)
-    st.write("Total Price: {} €".format(price))
+    price = calculate_price(movies_bought)
+    if price < 0:
+        st.write("Désolé, votre panier de films est vide. Veuillez ajouter des films au panier.")
+    else:
+        st.write("Total Price: {} €".format(price))

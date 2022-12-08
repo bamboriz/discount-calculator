@@ -39,4 +39,4 @@ test_data = [
 
 @pytest.mark.parametrize("cart, expected_price", test_data)
 def test_calculate_price(cart, expected_price):
-    assert calculate_price(cart, PromoSaga.BACK_TO_THE_FUTURE) == expected_price
+    assert calculate_price(cart) == expected_price
